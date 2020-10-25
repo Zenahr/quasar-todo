@@ -72,7 +72,7 @@
       </q-img>
     </q-drawer>
 
-    <q-page-container class="dark">
+    <q-page-container class="">
       <keep-alive>
         <router-view />
       </keep-alive>
