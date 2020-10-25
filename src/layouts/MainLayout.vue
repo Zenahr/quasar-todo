@@ -14,7 +14,8 @@
 
 <div class="q-px-lg q-pt-xl q-mb-md">
   <div class="text-h3">Todo</div>
-  <div class="">Monday 4 November</div>
+  <div class="text-subtitle1">Monday 4 November</div>
+  <q-img src="../assets/bg.jpg" class="header-image absolute-top"/>
 </div>
 
     </q-header>
@@ -105,3 +106,13 @@ export default {
   }
 }
 </script>
+
+
+<style lang="scss">
+.header-image {
+  height: 100%;
+  z-index: -1;
+  opacity: .2;
+  filter: grayscale(100%);
+}
+</style>
