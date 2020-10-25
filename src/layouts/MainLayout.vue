@@ -14,7 +14,7 @@
 
 <div class="q-px-lg q-pt-xl q-mb-md">
   <div class="text-h3">Todo</div>
-  <div class="text-subtitle1">Monday 4 November</div>
+  <div class="text-subtitle1">{{ currentDate }}</div>
   <q-img src="../assets/bg.jpg" class="header-image absolute-top"/>
 </div>
 
@@ -49,6 +49,8 @@
 
 <script>
 import EssentialLink from 'components/EssentialLink.vue'
+import { date } from 'quasar'
+
 
 const linksData = [
   {
@@ -95,6 +97,7 @@ const linksData = [
   }
 ];
 
+
 export default {
   name: 'MainLayout',
   components: { EssentialLink },
@@ -102,6 +105,13 @@ export default {
     return {
       leftDrawerOpen: false,
       essentialLinks: linksData
+    }
+  },
+  computed: {
+    currentDate() {
+      let timeStamp       = Date.now()
+      let formattedString = date.formatDate(timeStamp, 'dddd, Do MMMM YYYY')
+      return formattedString
     }
   }
 }
