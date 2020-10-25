@@ -7,10 +7,11 @@
       <q-item 
       v-for="task in tasks"
       :key="task.title"
-      v-ripple
       class=""
       clickable
       @click="task.done = !task.done"
+      :class="{'done' : task.done}"
+
       >
         <q-item-section avatar>
           <q-checkbox
@@ -48,7 +49,14 @@ data() {
     ]
   }
 }
-
-
 };
 </script>
+
+<style lang="scss">
+  .done {
+    .q-item__label {
+      text-decoration: line-through;
+      color: #9c9c9c;
+    }
+  }
+</style>
