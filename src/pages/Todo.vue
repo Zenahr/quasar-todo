@@ -66,10 +66,12 @@ export default {
         })
         .onOk(() => {
           this.tasks.splice(index, 1);
+          this.$q.notify("Task removed successfully.");
         });
     },
     deleteTask(index) {
-          this.tasks.splice(index, 1);
+      this.tasks.splice(index, 1);
+      this.$q.notify("Task removed successfully.");
     },
   },
 };
